@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  nats:
+    container_name: microservice-shared-nats
+    image: nats:2.6.2-scratch
+    ports:
+      - '4222:4222'
+    volumes:
+      - /microservice-volumes/shared/nats:/etc/nats
