@@ -8,3 +8,10 @@ services:
       - '4222:4222'
     volumes:
       - /microservice-volumes/shared/nats:/etc/nats
+
+  jaeger:
+    container_name: microservice-shared-jaeger
+    image: jaegertracing/all-in-one:1.27
+    ports:
+      - '16686:16686'
+      - '6831:6831/udp'
